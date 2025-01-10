@@ -135,130 +135,125 @@
 //     }
 //   };
 
-  return (
-    <>
-        <h1 className="text-4xl font-bold mb-6 text-white">NFT AI Tool</h1>
-        </>
-  );
+//   return (
+//     <div
+//       className="flex flex-col items-center justify-center min-h-screen"
+//       style={{
+//         backgroundImage: `url(${canvasTexture})`,
+//         backgroundSize: "cover",
+//         backgroundRepeat: "no-repeat",
+//         backgroundPosition: "center",
+//       }}
+//       onMouseMove={onDrag}
+//       onMouseUp={stopDragging}
+//     >
+//       <h1 className="text-4xl font-bold mb-6 text-white">NFT AI Tool</h1>
+//       <div
+//         className="relative border rounded-md flex items-center justify-center bg-gray-800"
+//         style={{ width: "336px", height: "336px" }}
+//       >
+//         {loading ? (
+//           <p className="text-white">Loading...</p>
+//         ) : image ? (
+//           <>
+//             <img
+//               src={image}
+//               alt="Generated NFT"
+//               className="absolute top-0 left-0 w-full h-full object-cover z-10"
+//             />
+//             {selectedAttributes.map((attribute, index) => (
+//               <img
+//                 key={index}
+//                 src={attribute}
+//                 alt="Attribute"
+//                 className="absolute cursor-grab z-20"
+//                 style={{
+//                   left: `${attributePositions[index].x}px`,
+//                   top: `${attributePositions[index].y}px`,
+//                   width: "336px",
+//                   height: "336px",
+//                   transform: "translate(-50%, -50%)",
+//                   position: "absolute",
+//                 }}
+//                 onMouseDown={() => startDragging(index)}
+//                 draggable={false}
+//               />
+//             ))}
+//           </>
+//         ) : (
+//           <p className="text-white">No image yet</p>
+//         )}
+//       </div>
 
-  //   <div
-  //     className="flex flex-col items-center justify-center min-h-screen"
-  //     style={{
-  //       backgroundImage: `url(${canvasTexture})`,
-  //       backgroundSize: "cover",
-  //       backgroundRepeat: "no-repeat",
-  //       backgroundPosition: "center",
-  //     }}
-  //     onMouseMove={onDrag}
-  //     onMouseUp={stopDragging}
-  //   >
-  //     <h1 className="text-4xl font-bold mb-6 text-white">NFT AI Tool</h1>
-  //     <div
-  //       className="relative border rounded-md flex items-center justify-center bg-gray-800"
-  //       style={{ width: "336px", height: "336px" }}
-  //     >
-  //       {loading ? (
-  //         <p className="text-white">Loading...</p>
-  //       ) : image ? (
-  //         <>
-  //           <img
-  //             src={image}
-  //             alt="Generated NFT"
-  //             className="absolute top-0 left-0 w-full h-full object-cover z-10"
-  //           />
-  //           {selectedAttributes.map((attribute, index) => (
-  //             <img
-  //               key={index}
-  //               src={attribute}
-  //               alt="Attribute"
-  //               className="absolute cursor-grab z-20"
-  //               style={{
-  //                 left: `${attributePositions[index].x}px`,
-  //                 top: `${attributePositions[index].y}px`,
-  //                 width: "336px",
-  //                 height: "336px",
-  //                 transform: "translate(-50%, -50%)",
-  //                 position: "absolute",
-  //               }}
-  //               onMouseDown={() => startDragging(index)}
-  //               draggable={false}
-  //             />
-  //           ))}
-  //         </>
-  //       ) : (
-  //         <p className="text-white">No image yet</p>
-  //       )}
-  //     </div>
-
-  //     <button
-  //       onClick={generateImage}
-  //       className="mt-4 bg-gradient-to-r from-orange-500 to-orange-800 text-white px-4 py-2 rounded-md"
-  //     >
-  //       Generate Image
-  //     </button>
-  //     {image && (
-  //       <>
-  //         <button
-  //           onClick={toggleModal}
-  //           className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md ml-4"
-  //         >
-  //           Add Attributes
-  //         </button>
-  //         <button
-  //             className="mt-4 bg-white text-black px-4 py-2 rounded-md ml-4"
-  //           >
-  //             Publish on Blockchain
-  //             <span
-  //               className="block mt-2 bg-rainbow bg-[length:200%_200%] animate-rainbow-move text-transparent bg-clip-text font-bold"
-  //             >
+//       <button
+//         onClick={generateImage}
+//         className="mt-4 bg-gradient-to-r from-orange-500 to-orange-800 text-white px-4 py-2 rounded-md"
+//       >
+//         Generate Image
+//       </button>
+//       {image && (
+//         <>
+//           <button
+//             onClick={toggleModal}
+//             className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md ml-4"
+//           >
+//             Add Attributes
+//           </button>
+//           <button
+//               className="mt-4 bg-white text-black px-4 py-2 rounded-md ml-4"
+//             >
+//               Publish on Blockchain
+//               <span
+//                 className="block mt-2 bg-rainbow bg-[length:200%_200%] animate-rainbow-move text-transparent bg-clip-text font-bold"
+//               >
                 
-  //               Coming Soon
-  //             </span>
-  //           </button>
-  //       </>
-  //     )}
+//                 Coming Soon
+//               </span>
+//             </button>
+//         </>
+//       )}
 
-  //     {isModalOpen && (
-  //       <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-  //         <div
-  //           className="bg-white p-6 rounded-lg"
-  //           style={{ width: "80%", maxHeight: "70vh", overflowY: "auto" }}
-  //         >
-  //           <h2 className="text-xl font-bold mb-4">Select Attributes</h2>
-  //           <div className="grid grid-cols-3 gap-4">
-  //             {attributeImages.map((attribute, index) => (
-  //               <div
-  //                 key={index}
-  //                 className={`border-2 p-2 rounded-lg cursor-pointer ${
-  //                   selectedAttributes.includes(attribute)
-  //                     ? "border-green-500"
-  //                     : "border-gray-300"
-  //                 }`}
-  //                 onClick={() => handleAttributeSelect(attribute, index)}
-  //               >
-  //                 <img
-  //                   src={attribute}
-  //                   alt={`Attribute ${index}`}
-  //                   className="w-full h-16 object-contain"
-  //                 />
-  //               </div>
-  //             ))}
-  //           </div>
-  //           <div className="flex justify-end mt-4">
-  //             <button
-  //               onClick={toggleModal}
-  //               className="bg-red-500 text-white px-4 py-2 rounded-md"
-  //             >
-  //               Close
-  //             </button>
+//       {isModalOpen && (
+//         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+//           <div
+//             className="bg-white p-6 rounded-lg"
+//             style={{ width: "80%", maxHeight: "70vh", overflowY: "auto" }}
+//           >
+//             <h2 className="text-xl font-bold mb-4">Select Attributes</h2>
+//             <div className="grid grid-cols-3 gap-4">
+//               {attributeImages.map((attribute, index) => (
+//                 <div
+//                   key={index}
+//                   className={`border-2 p-2 rounded-lg cursor-pointer ${
+//                     selectedAttributes.includes(attribute)
+//                       ? "border-green-500"
+//                       : "border-gray-300"
+//                   }`}
+//                   onClick={() => handleAttributeSelect(attribute, index)}
+//                 >
+//                   <img
+//                     src={attribute}
+//                     alt={`Attribute ${index}`}
+//                     className="w-full h-16 object-contain"
+//                   />
+//                 </div>
+//               ))}
+//             </div>
+//             <div className="flex justify-end mt-4">
+//               <button
+//                 onClick={toggleModal}
+//                 className="bg-red-500 text-white px-4 py-2 rounded-md"
+//               >
+//                 Close
+//               </button>
               
-  //           </div>
-  //         </div>
-  //       </div>
-  //     )}
-  //   </div>
-  // );
-};
+//             </div>
+//           </div>
+//         </div>
+//       )}
+//     </div>
+//   );
+// };
 
-export default NftAiTool;
+// export default NftAiTool;
 

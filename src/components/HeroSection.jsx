@@ -18,13 +18,13 @@ const HeroSection = () => {
         into immersive reality!
       </p>
       <div className="flex justify-center my-10">
-        <Link
+        {/* <Link
           to="/nft-ai-tool"
           className="bg-gradient-to-r from-orange-500 to-orange-800 py-3 px-4 mx-3 rounded-md"
         >
           NFT AI Tool
         </Link>
-        {/* <Link
+        <Link
           to="/nft-custom-tool"
           className="py-3 px-4 mx-3 rounded-md border"
         >
