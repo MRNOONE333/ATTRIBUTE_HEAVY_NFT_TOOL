@@ -24,12 +24,12 @@ const HeroSection = () => {
         >
           NFT AI Tool
         </Link>
-        <Link
+        {/* <Link
           to="/nft-custom-tool"
           className="py-3 px-4 mx-3 rounded-md border"
         >
           Custom NFT Emoji
-        </Link>
+        </Link> */}
       </div>
       <div className="flex mt-10 justify-center">
         <video
